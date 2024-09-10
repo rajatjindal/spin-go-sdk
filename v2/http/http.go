@@ -1,5 +1,3 @@
-// Package http contains the helper functions for writing Spin HTTP components
-// in TinyGo, as well as for sending outbound HTTP requests.
 package http
 
 import (
@@ -10,7 +8,6 @@ import (
 	incominghandler "github.com/fermyon/spin-go-sdk/v2/internal/wasi/http/v0.2.0/incoming-handler"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/http/v0.2.0/types"
 	"github.com/fermyon/spin-go-sdk/v2/wit"
-	"github.com/julienschmidt/httprouter"
 	"github.com/ydnar/wasm-tools-go/cm"
 )
 
@@ -41,29 +38,6 @@ const (
 	HeaderClientAddr = "spin-client-addr"
 )
 
-// Router is a http.Handler which can be used to dispatch requests to different
-// handler functions via configurable routes
-type Router = httprouter.Router
-
-// Params is a Param-slice, as returned by the router.
-// The slice is ordered, the first URL parameter is also the first slice value.
-// It is therefore safe to read values by the index.
-type Params = httprouter.Params
-
-// Param is a single URL parameter, consisting of a key and a value.
-type Param = httprouter.Param
-
-// RouterHandle is a function that can be registered to a route to handle HTTP
-// requests. Like http.HandlerFunc, but has a third parameter for the values of
-// wildcards (variables).
-type RouterHandle = httprouter.Handle
-
-// New returns a new initialized Router.
-// Path auto-correction, including trailing slashes, is enabled by default.
-func NewRouter() *Router {
-	return httprouter.New()
-}
-
 // handler is the function that will be called by the http trigger in Spin.
 var handler = defaultHandler
 
@@ -83,7 +57,6 @@ var wasiHandle = func(request types.IncomingRequest, responseOut types.ResponseO
 	// convert the incoming request to go's net/http type
 	httpReq, err := NewHttpRequest(request)
 	if err != nil {
-		//TODO(rajatjindal): return internal error from here
 		fmt.Printf("failed to convert wasi/http/types.IncomingRequest to http.Request: %s\n", err)
 		return
 	}
@@ -94,10 +67,8 @@ var wasiHandle = func(request types.IncomingRequest, responseOut types.ResponseO
 	// run the user's handler
 	handler(httpRes, httpReq)
 
-	// ensure default status ok and response body are set
 	_ = httpRes.reconcile()
 
-	// actually send the response back
 	result := cm.OK[cm.Result[types.ErrorCodeShape, types.OutgoingResponse, types.ErrorCode]](httpRes.response)
 	types.ResponseOutparamSet(httpRes.outparam, result)
 }

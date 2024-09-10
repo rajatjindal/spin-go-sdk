@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/cli/v0.2.0/stdout"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/http/v0.2.0/types"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/streams"
 	"github.com/ydnar/wasm-tools-go/cm"
@@ -123,7 +124,7 @@ func NewHttpResponseWriter(out types.ResponseOutparam) *responseOutparamWriter {
 
 func (row *responseOutparamWriter) reconcile() error {
 	// this response has been already reconciled
-	// which means the user explicitly called response.Write(buf []byte) fn
+	// which means the user explicitly called response.Write(buf[]byte) fn
 	if row.reconciled {
 		return nil
 	}
@@ -136,6 +137,7 @@ func (row *responseOutparamWriter) reconcile() error {
 	// setting any headers after this will cause panic
 	row.response = types.NewOutgoingResponse(row.wasiHeaders)
 
+	//set status code
 	// set status code. default to 200
 	if row.statuscode == 0 {
 		row.statuscode = http.StatusOK
@@ -147,4 +149,9 @@ func (row *responseOutparamWriter) reconcile() error {
 	row.reconciled = true
 
 	return nil
+}
+
+func println(msg string) {
+	stdout.GetStdout().Write(cm.ToList([]byte(msg)))
+	stdout.GetStdout().Write(cm.ToList([]byte("\n")))
 }

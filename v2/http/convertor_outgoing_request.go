@@ -15,7 +15,7 @@ func NewOutgoingHttpRequest(req *http.Request) (types.OutgoingRequest, error) {
 	or := types.NewOutgoingRequest(headers)
 	or.SetAuthority(cm.Some(req.Host))
 	or.SetMethod(toWasiMethod(req.Method))
-	or.SetPathWithQuery(cm.Some(req.URL.RawPath))
+	or.SetPathWithQuery(cm.Some(req.URL.Path + "?" + req.URL.Query().Encode()))
 
 	switch req.URL.Scheme {
 	case "http":
