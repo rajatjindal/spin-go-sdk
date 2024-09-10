@@ -4,7 +4,7 @@
 package sqlite
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // Connection represents the u32 "fermyon:spin/sqlite#connection".

@@ -4,8 +4,8 @@
 package postgres
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	rdbmstypes "github.com/fermyon/spin-go-sdk/v2/internal/fermyon/spin/rdbms-types"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // PgError represents the variant "fermyon:spin/postgres#pg-error".

@@ -3,8 +3,8 @@
 package types
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	wallclock "github.com/fermyon/spin-go-sdk/v2/internal/wasi/clocks/v0.2.0/wall-clock"
-	"github.com/ydnar/wasm-tools-go/cm"
 	"unsafe"
 )
 

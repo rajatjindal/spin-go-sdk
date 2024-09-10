@@ -3,8 +3,8 @@
 package types
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	monotonicclock "github.com/fermyon/spin-go-sdk/v2/internal/wasi/clocks/v0.2.0/monotonic-clock"
-	"github.com/ydnar/wasm-tools-go/cm"
 	"unsafe"
 )
 

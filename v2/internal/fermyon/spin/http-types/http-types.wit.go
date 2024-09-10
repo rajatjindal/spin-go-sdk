@@ -4,7 +4,7 @@
 package httptypes
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // HTTPStatus represents the u16 "fermyon:spin/http-types#http-status".

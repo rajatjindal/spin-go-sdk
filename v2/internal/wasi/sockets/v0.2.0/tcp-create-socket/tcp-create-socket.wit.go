@@ -4,9 +4,9 @@
 package tcpcreatesocket
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/sockets/v0.2.0/network"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/sockets/v0.2.0/tcp"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // CreateTCPSocket represents the imported function "create-tcp-socket".

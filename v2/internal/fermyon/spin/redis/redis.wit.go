@@ -4,8 +4,8 @@
 package redis
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	redistypes "github.com/fermyon/spin-go-sdk/v2/internal/fermyon/spin/redis-types"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // Publish represents the imported function "publish".

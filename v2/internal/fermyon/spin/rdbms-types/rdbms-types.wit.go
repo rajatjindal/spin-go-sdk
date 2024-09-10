@@ -4,7 +4,7 @@
 package rdbmstypes
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // DbDataType represents the enum "fermyon:spin/rdbms-types#db-data-type".

@@ -4,7 +4,7 @@
 package keyvalue
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // Store represents the u32 "fermyon:spin/key-value#store".

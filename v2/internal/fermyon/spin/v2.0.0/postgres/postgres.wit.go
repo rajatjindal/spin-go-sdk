@@ -4,8 +4,8 @@
 package postgres
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	rdbmstypes "github.com/fermyon/spin-go-sdk/v2/internal/fermyon/spin/v2.0.0/rdbms-types"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // Connection represents the imported resource "fermyon:spin/postgres@2.0.0#connection".

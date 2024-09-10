@@ -3,8 +3,8 @@
 package inboundhttp
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	httptypes "github.com/fermyon/spin-go-sdk/v2/internal/fermyon/spin/http-types"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 func lift_OptionBody(f0 uint32, f1 *uint8, f2 uint32) (v cm.Option[httptypes.Body]) {

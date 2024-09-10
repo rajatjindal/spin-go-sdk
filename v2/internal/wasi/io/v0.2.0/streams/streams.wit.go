@@ -10,9 +10,9 @@
 package streams
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	ioerror "github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/error"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/poll"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // StreamError represents the imported variant "wasi:io/streams@0.2.0#stream-error".

@@ -7,8 +7,8 @@
 package terminalstdout
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	terminaloutput "github.com/fermyon/spin-go-sdk/v2/internal/wasi/cli/v0.2.0/terminal-output"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // GetTerminalStdout represents the imported function "get-terminal-stdout".

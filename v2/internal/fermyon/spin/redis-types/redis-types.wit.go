@@ -4,7 +4,7 @@
 package redistypes
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // Error represents the enum "fermyon:spin/redis-types#error".

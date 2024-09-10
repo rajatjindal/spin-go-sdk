@@ -6,7 +6,7 @@
 package llm
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // InferencingModel represents the string "fermyon:spin/llm#inferencing-model".

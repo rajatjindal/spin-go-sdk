@@ -8,11 +8,11 @@
 package types
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	monotonicclock "github.com/fermyon/spin-go-sdk/v2/internal/wasi/clocks/v0.2.0/monotonic-clock"
 	ioerror "github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/error"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/poll"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/streams"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // Method represents the variant "wasi:http/types@0.2.0#method".

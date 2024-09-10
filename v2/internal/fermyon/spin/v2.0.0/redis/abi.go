@@ -3,7 +3,7 @@
 package redis
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	"unsafe"
 )
 

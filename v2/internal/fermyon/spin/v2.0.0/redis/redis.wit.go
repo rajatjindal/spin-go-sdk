@@ -4,7 +4,7 @@
 package redis
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // Error represents the variant "fermyon:spin/redis@2.0.0#error".

@@ -4,7 +4,7 @@
 package variables
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // Error represents the variant "fermyon:spin/variables@2.0.0#error".

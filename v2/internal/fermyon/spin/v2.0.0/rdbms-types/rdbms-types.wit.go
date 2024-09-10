@@ -4,7 +4,7 @@
 package rdbmstypes
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // Error represents the variant "fermyon:spin/rdbms-types@2.0.0#error".

@@ -4,8 +4,8 @@
 package http
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	httptypes "github.com/fermyon/spin-go-sdk/v2/internal/fermyon/spin/http-types"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // SendRequest represents the imported function "send-request".

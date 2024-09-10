@@ -29,10 +29,10 @@
 package types
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	wallclock "github.com/fermyon/spin-go-sdk/v2/internal/wasi/clocks/v0.2.0/wall-clock"
 	ioerror "github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/error"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/io/v0.2.0/streams"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // FileSize represents the u64 "wasi:filesystem/types@0.2.0#filesize".

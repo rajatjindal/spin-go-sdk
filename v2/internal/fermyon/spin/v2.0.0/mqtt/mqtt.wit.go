@@ -4,7 +4,7 @@
 package mqtt
 
 import (
-	"github.com/ydnar/wasm-tools-go/cm"
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 )
 
 // Error represents the variant "fermyon:spin/mqtt@2.0.0#error".

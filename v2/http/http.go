@@ -11,7 +11,6 @@ import (
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/http/v0.2.0/types"
 	"github.com/fermyon/spin-go-sdk/v2/wit"
 	"github.com/julienschmidt/httprouter"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // force wit files to be shipped with sdk dependency

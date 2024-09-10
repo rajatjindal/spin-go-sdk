@@ -4,9 +4,9 @@
 package udpcreatesocket
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/sockets/v0.2.0/network"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/sockets/v0.2.0/udp"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // CreateUDPSocket represents the imported function "create-udp-socket".

@@ -6,8 +6,8 @@
 package instancenetwork
 
 import (
+	"github.com/bytecodealliance/wasm-tools-go/cm"
 	"github.com/fermyon/spin-go-sdk/v2/internal/wasi/sockets/v0.2.0/network"
-	"github.com/ydnar/wasm-tools-go/cm"
 )
 
 // InstanceNetwork represents the imported function "instance-network".
