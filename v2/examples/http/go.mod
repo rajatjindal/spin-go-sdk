@@ -6,7 +6,7 @@ require github.com/fermyon/spin-go-sdk/v2 v2.0.0
 
 require (
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
-	go.bytecodealliance.org v0.4.0 // indirect
+	go.bytecodealliance.org/cm v0.2.2 // indirect
 )
 
 replace github.com/fermyon/spin-go-sdk/v2 => ../../
